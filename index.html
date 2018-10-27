@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gif Hunter</title>
+    <style type="text/css">
+        button,
+        div,
+        form,
+        input {
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="gifs.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gif Finding!!</h1>
+
+        <!-- Rendered Buttons will get Dumped Here  -->
+        <div id="buttons-view"></div>
+
+        <form id="gif-form">
+            <label for="gif-input">Find a Gif!</label>
+            <input type="text" id="gif-input">
+            <br>
+
+            <!-- Button triggers new gif to be added -->
+            <input id="add-gif" type="submit" value="Add a gif selection!">
+        </form>
+
+        <!--Gifs will Get Dumped Here -->
+        <div id="gifs-view"></div>
+    </div>
+   
+</body>
+
+</html>
