@@ -22,7 +22,7 @@ function makeButtons() {
 
     // Deleting the movies prior to adding new movies
     // (this is necessary otherwise you will have repeat buttons)
-    $("#gifs-view").empty();
+    $("#buttons-view").empty();
 
     // Looping through the array of movies
     for (var i = 0; i < gifs.length; i++) {
@@ -33,11 +33,11 @@ function makeButtons() {
         // Adding a class of movie-btn to our button
         a.addClass("gif-btn");
         // Adding a data-attribute
-        a.attr("data-name", movies[i]);
+        a.attr("data-name", gifs[i]);
         // Providing the initial button text
-        a.text(movies[i]);
+        a.text(gifs[i]);
         // Adding the button to the buttons-view div
-        $("#gifs-view").append(a);
+        $("#buttons-view").append(a);
     }
 }
 
@@ -45,10 +45,10 @@ function makeButtons() {
 $("#add-gif").on("click", function (event) {
     event.preventDefault();
     // This line grabs the input from the textbox
-    var movie = $("#gif-input").val().trim();
+    var gif = $("#gif-input").val().trim();
 
     // Adding movie from the textbox to our array
-    movies.push(movie);
+    gifs.push(gif);
 
     // Calling renderButtons which handles the processing of our movie array
     makeButtons();
